@@ -1,17 +1,14 @@
 
 import React from 'react';
 import { View, TouchableOpacity, Text, StyleSheet } from 'react-native';
-import Animated, {
-    SlideInLeft,
-    SlideOutLeft,
-  } from 'react-native-reanimated';
+import Animated, { SlideInLeft, SlideOutLeft } from 'react-native-reanimated';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import UIExam from '../Screens/UIExam';
 import NativeModuleExam from '../Screens/NativeModuleExam';
 
 export const AppDrawer = ({ openDrawer, children, route }) => {
     const inset = useSafeAreaInsets();
-    console.log(route)
+    // console.log(route)
   return (
     <>
     {route === 'UIExam' || route === '' ?
@@ -38,10 +35,6 @@ export const AppDrawer = ({ openDrawer, children, route }) => {
 };
 
 export const DrawarItem = ({ children, closeDrawer, setRoute, name, label }) => {
-    const press = (label) => {
-        closeDrawer()
-        setRoute(label)
-    }
     return (
     <TouchableOpacity 
         onPress={() => {

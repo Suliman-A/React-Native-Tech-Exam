@@ -1,7 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
 import {  StyleSheet } from 'react-native';
-
-import UIExam from './Screens/UIExam';
 import { AppDrawer, DrawarItem } from './Components/AppDrawer';
 import React from 'react'
 import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
@@ -16,10 +14,6 @@ export default function App() {
   }
   const closeDrawer = () => {
     setOpenDrawer(false)
-  }
-  const drawerData = {
-    label: 'UI Exam',
-    screen: <UIExam />
   }
 
   return (
@@ -38,7 +32,7 @@ export default function App() {
             closeDrawer={closeDrawer}
             />
           <DrawarItem 
-            label='NativeModuleExam'
+            label='Native Module Exam'
             name='NativeModuleExam' 
             setRoute={setRoute}
             closeDrawer={closeDrawer}
